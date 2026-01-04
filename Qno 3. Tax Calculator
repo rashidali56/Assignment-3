@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double income, tax, netSalary;
+    cout << "Enter your monthly income: ";
+    cin >> income;
+
+    if(income < 50000)
+    {
+        tax = 0;
+    }
+    else if(income <= 100000)
+    {
+        tax = income * 0.10;
+    }
+    else if(income <= 200000)
+    {
+        tax = income * 0.20;
+    }
+    else
+    {
+        tax = income * 0.30;
+    }
+
+    netSalary = income - tax;
+
+    cout << "Tax amount: " << tax << endl;
+    cout << "Net salary after tax deduction: " << netSalary << endl;
+
+    return 0;
+}
