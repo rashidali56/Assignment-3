@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string username, password;
+    int attempts = 0;
+    const int maxAttempts = 3;
+
+    while(attempts < maxAttempts)
+    {
+        cout << "Enter username: ";
+        cin >> username;
+
+        cout << "Enter password: ";
+        cin >> password;
+
+        if(username == "admin" && password == "12345")
+        {
+            cout << "Login Successful" << endl;
+            break;
+        }
+        else
+        {
+            cout << "Incorrect username or password" << endl;
+            attempts++;
+        }
+    }
+
+    if(attempts == maxAttempts)
+    {
+        cout << "Account Locked" << endl;
+    }
+
+    return 0;
+}
