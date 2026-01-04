@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int marks;
+    cout << "Enter marks (0-100): ";
+    cin >> marks;
+
+    if(marks >= 0 && marks <= 100)
+    {
+        if(marks >= 90)
+        {
+            cout << "Grade: A+" << endl;
+            cout << "Status: Pass" << endl;
+        }
+        else if(marks >= 80)
+        {
+            cout << "Grade: A" << endl;
+            cout << "Status: Pass" << endl;
+        }
+        else if(marks >= 70)
+        {
+            cout << "Grade: B" << endl;
+            cout << "Status: Pass" << endl;
+        }
+        else if(marks >= 60)
+        {
+            cout << "Grade: C" << endl;
+            cout << "Status: Pass" << endl;
+        }
+        else
+        {
+            cout << "Grade: Fail" << endl;
+            cout << "Status: Fail" << endl;
+        }
+    }
+    else
+    {
+        cout << "Invalid marks entered!" << endl;
+    }
+
+    return 0;
+}
