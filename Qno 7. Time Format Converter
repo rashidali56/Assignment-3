@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int hour;
+    cout << "Enter time in 24-hour format (0-23): ";
+    cin >> hour;
+
+    if(hour >= 0 && hour <= 23)
+    {
+        if(hour == 0)
+        {
+            cout << "Time in 12-hour format: 12 AM" << endl;
+        }
+        else if(hour == 12)
+        {
+            cout << "Time in 12-hour format: 12 PM" << endl;
+        }
+        else if(hour > 0 && hour < 12)
+        {
+            cout << "Time in 12-hour format: " << hour << " AM" << endl;
+        }
+        else
+        {
+            cout << "Time in 12-hour format: " << hour - 12 << " PM" << endl;
+        }
+    }
+    else
+    {
+        cout << "Invalid input! Please enter 0-23." << endl;
+    }
+
+    return 0;
+}
