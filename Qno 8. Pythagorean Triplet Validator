@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a, b, c;
+    cout << "Enter three integers: ";
+    cin >> a >> b >> c;
+
+    int maxNum = a;
+    int x = a, y = b, z = c;
+
+    if(b > maxNum)
+    {
+        maxNum = b;
+        x = b; y = a; z = c;
+    }
+    if(c > maxNum)
+    {
+        maxNum = c;
+        x = c; y = a; z = b;
+    }
+
+    if((x*x) == (y*y + z*z))
+    {
+        cout << "The numbers form a Pythagorean Triplet" << endl;
+    }
+    else
+    {
+        cout << "The numbers do not form a Pythagorean Triplet" << endl;
+    }
+
+    return 0;
+}
