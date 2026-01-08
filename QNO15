@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int start, end;
+
+    cout << "Enter first number:" << endl;
+    cin >> start;
+
+    cout << "Enter second number:" << endl;
+    cin >> end;
+
+    cout << "Prime numbers between the given limits are:" << endl;
+
+    for (int num = start; num <= end; num++)
+    {
+        if (num <= 1)
+        {
+            continue;
+        }
+
+        bool isPrime = true;
+
+        for (int i = 2; i <= num / 2; i++)
+        {
+            if (num % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime)
+        {
+            cout << num << endl;
+        }
+    }
+
+    return 0;
+}
