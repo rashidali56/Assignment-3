@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int studentType;
+    char late;
+    double fee;
+
+    cout << "Select student type:" << endl;
+    cout << "1. Regular" << endl;
+    cout << "2. Self-Finance" << endl;
+    cout << "3. Sports" << endl;
+    cin >> studentType;
+
+    cout << "Is the payment late? (Y/N):" << endl;
+    cin >> late;
+
+    switch (studentType)
+    {
+        case 1:
+            fee = 50000;
+            break;
+        case 2:
+            fee = 85000;
+            break;
+        case 3:
+            fee = 30000;
+            break;
+        default:
+            cout << "Invalid student type." << endl;
+            return 0;
+    }
+
+    if (late == 'Y' || late == 'y')
+    {
+        fee = fee + (fee * 10 / 100);
+    }
+
+    cout << "Payable fee is: " << fee << endl;
+
+    return 0;
+}
