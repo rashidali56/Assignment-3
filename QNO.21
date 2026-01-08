@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "1" << endl;
+    cout << "01" << endl;
+    cout << "101" << endl;
+    cout << "0101" << endl;
+
+    return 0;
+}
