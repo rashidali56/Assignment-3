@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int presentDays;
+    int totalDays = 30;
+
+    cout << "Enter number of days present:" << endl;
+    cin >> presentDays;
+
+    if (presentDays < 0 || presentDays > totalDays)
+    {
+        cout << "Invalid input." << endl;
+        return 0;
+    }
+
+    double attendance = (presentDays * 100.0) / totalDays;
+
+    if (attendance >= 90)
+    {
+        cout << "Excellent" << endl;
+    }
+    else if (attendance >= 75)
+    {
+        cout << "Satisfactory" << endl;
+    }
+    else
+    {
+        cout << "Warning" << endl;
+    }
+
+    return 0;
+}
