@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+bool endsWithItself(int n)
+{
+    int square = n * n;
+    int temp = n;
+    int digits = 0;
+
+    while (temp > 0)
+    {
+        digits++;
+        temp = temp / 10;
+    }
+
+    int lastDigits = square % static_cast<int>(pow(10, digits));
+
+    if (lastDigits == n)
+        return true;
+    else
+        return false;
+}
+
+int main()
+{
+    int num;
+
+    cout << "Enter a number:" << endl;
+    cin >> num;
+
+    if (endsWithItself(num))
+        cout << num << " squared ends with " << num << endl;
+    else
+        cout << num << " squared does not end with " << num << endl;
+
+    return 0;
+}
