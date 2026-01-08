@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int start, end;
+
+    cout << "Enter starting value:" << endl;
+    cin >> start;
+
+    cout << "Enter ending value:" << endl;
+    cin >> end;
+
+    cout << "Armstrong numbers in the given range are:" << endl;
+
+    for (int i = start; i <= end; i++)
+    {
+        int temp = i;
+        int sum = 0;
+        int digits = 0;
+
+        int num = i;
+        while (num > 0)
+        {
+            digits++;
+            num = num / 10;
+        }
+
+        num = temp;
+        while (num > 0)
+        {
+            int digit = num % 10;
+            sum = sum + pow(digit, digits);
+            num = num / 10;
+        }
+
+        if (sum == i)
+        {
+            cout << i << endl;
+        }
+    }
+
+    return 0;
+}
